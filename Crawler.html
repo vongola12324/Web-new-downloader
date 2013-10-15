@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html><head>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
+  <title>Crawler</title>
+  <script src="jquery.min.js"></script>
+  <script>
+	  function addUrl() {
+		  var url = $("form#url input").val()
+		  if (url != "") {
+		    $("div#urlList").load("urlList.rb?url=\""+encodeURI(url)"\"")
+		}
+	  }
+   </script>
+</head>
+<body>
+	<br>
+&#21152;&#20837;&#32178;&#22336;<br>
+<form method="post"  name="url" id="url">
+	URI:<input name="uriText">&nbsp;&nbsp;&nbsp;<input name="submit" value="add" type="submit" onclick="javascript:addUrl()">
+	<br>
+</form>
+<br>
+<div id="urlList">
+</div>
+<br>
+<span style="color: red; font-weight: bold;">&#27880;&#24847;&#65306;&#31532;&#19968;&#27425;&#21152;&#20837;&#30340;&#32178;&#22336;&#23559;&#26371;&#25104;&#28858;&#22522;&#28310;&#40670;&#65292;&#20063;&#23601;&#26159;&#35498;&#21482;&#26377;&#20043;&#24460;&#22686;&#21152;&#30340;&#26481;&#35199;&#25165;&#26371;&#19979;&#36617;</span><br style="color: red; font-weight: bold;">
+<span style="color: red; font-weight: bold;">&#21478;&#22806;&#25152;&#26377;&#30340;&#26481;&#35199;&#37117;&#26371;&#34987;&#19979;&#36617;&#65292;&#22240;&#27492;&#35531;&#20808;&#25226;&#23383;&#24149;&#32068;&#31561;&#26781;&#20214;&#29992;&#25628;&#23563;&#26781;&#20214;&#36942;&#28670;&#25481;(&#31505;</span><br>
+<br>
+&#26368;&#36817;&#26356;&#26032;(10&#31558;)(&#19981;&#32102;&#20320;&#35519;:p)<br>
+<br>
+<div id="history">
+</div>
+<br />
+Power by DanSnow<br>
+<br>
+</body></html>
