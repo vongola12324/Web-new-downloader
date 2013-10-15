@@ -7,8 +7,22 @@
 	  function addUrl() {
 		  var url = $("form#url input").val()
 		  if (url != "") {
-		    $("div#urlList").load("urlList.rb?url=\""+encodeURI(url)"\"")
+		    $("div#urlList").load("urlList.rb?url="+encodeURI(url));
 		}
+	  }
+	  
+	  function check() {
+		  $.get("main.rb");
+		  $("div#history").load("history.rb");
+	  }
+	  
+	  window.onload = function()  {
+		  $("div#urlList").load("urlList.rb");
+		  $("div#history").load("history.rb");
+		  timeOutId = setInterval(ckeck, 5000);
+	  }
+	  window.onunload = function() {
+		  cleanInterval(timeoutId);
 	  }
    </script>
 </head>
