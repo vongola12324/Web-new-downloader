@@ -4,7 +4,7 @@ require 'yaml'
 require 'erb'
 
 class Setting < Hash
-  def initialize(fileOrHash)
+  def initialize(fileOrHash = nil)
 	case fileOrHash
 	when nil
 	  hash = {}
