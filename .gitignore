@@ -16,6 +16,7 @@ tmp
 .yardoc
 _yardoc
 doc/
+<<<<<<< HEAD
 
 #vim
 *.s[a-w][a-z]
@@ -24,3 +25,5 @@ Session.vim
 .netrwhist
 *~
 
+=======
+>>>>>>> 06bdb1a135e1cbf5b834a260eb82d880ff7bed85
