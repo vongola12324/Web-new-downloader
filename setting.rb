@@ -23,8 +23,11 @@ class Setting < Hash
 	val = self.class.new(val, @section) if val.is_a? Hash
     store(key.to_s, val)
   end
+  def to_hash
+	Hash[self]
+  end
   def save(name)
-	File.write(name, Hash[self].to_yaml)
+	File.write(name, self.to_hash.to_yaml)
   end
 end
 
