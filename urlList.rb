@@ -2,10 +2,17 @@
 
 require 'cgi'
 
-require 'setting'
+require_relative 'setting'
+
+conf = Setting.new("config.yml")
 
 cgi = CGI.new
 
 if cgi.key?("url")
-  url = cgi["url"]
+  url = CGI.unescape(cgi["url"])
+  if url.match(%r!^http://www.ktxp.com/[\w/=?+&]*!)
+	conf['url'].push url
+  end
 end
+
+
