@@ -29,5 +29,13 @@ class Setting < Hash
   def save(name)
 	File.write(name, self.to_hash.to_yaml)
   end
+private
+  def missing_method(name, *args, &block)
+  	if key? name.to_s
+  	  fetch(name.to_s)
+	else
+	  super
+	end
+  end
 end
 
